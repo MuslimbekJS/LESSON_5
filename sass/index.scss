@@ -11,7 +11,7 @@
     box-sizing: border-box;
     // font-family: 'Roboto', sans-serif;
     font-family: 'Rubik', sans-serif;
-    transition: 1s;
+    transition: 0.5s;
 
 }
 
@@ -269,6 +269,10 @@ header {
     }
 
     button {
+        a:hover{
+            color: #70C05B;
+            
+        }
         margin-top: 100px;
         background-color: #FBF8ECFF;
         border: none;

@@ -18,8 +18,8 @@
                             <img src="pages/images/logo.png" alt="">
 
                         </div>
-                        <button class="btn-1" id="toggleForm"> <a href="pages/categories.html"><img src="pages/images/menu.png"
-                                    alt="">
+                        <button class="btn-1" id="toggleForm"> <a href="pages/categories.html"><img
+                                    src="pages/images/menu.png" alt="">
                                 <p>Каталог</p>
                             </a> </button>
                         <div class="input">
@@ -42,7 +42,10 @@
                         </div>
                         <div class="avatar">
                             <img src="pages/images/avatar.png" alt="">
-                            <a href="">Алексей</a>
+                            
+                                <a href="#" id="btnOpen">Алексей</a>
+
+                            
                             <img src="pages/images/drp.png" alt="">
                         </div>
 
@@ -85,8 +88,8 @@
         <div class="conteiner">
             <div class="sal">
                 <h1>Акции</h1>
-                <button><a style="text-decoration: none; color: black ;" href="pages/products.html">Все продукты</a> <img
-                        src="" alt=""></button>
+                <button><a style="text-decoration: none; color: black ;" href="pages/products.html">Все продукты</a>
+                    <img src="" alt=""></button>
             </div>
             <div class="cards">
                 <div class="card">
@@ -381,7 +384,33 @@
             </div>
         </div>
 
+        
+
     </section>
+
+    <section>
+        <div class="modal">
+            <div class="modal-cont">
+                <button id="btnClose">X</button>
+                <h1>Log in</h1>
+                <div class="modal-content">
+                    <input type="text" placeholder="Number">
+                    <div class="login-btn">
+                        <button>Login</button>
+                    </div>
+                    <div class="register">
+                        <button class="registration">Registration</button>
+                        <a href="#">Forgot password?</a>
+
+                    </div>
+
+                </div>
+        
+            </div>
+        
+        </div>
+    </section>
+
     <footer class="section5">
         <div class="conteiner">
             <div class="footer">
@@ -427,9 +456,9 @@
 
 
 
-
-    <script src="../js/home.js"></script>
-    <script src="../js/product.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/home.js"></script>
+    <!-- <script src="../js/product.js"></script> -->
 </body>
 
 </html>

@@ -7,6 +7,10 @@
   transition: 1s;
 }
 
+body {
+  overflow: auto;
+}
+
 header {
   background-color: white;
   width: 100%;

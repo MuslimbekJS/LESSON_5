@@ -12,13 +12,16 @@
     // font-family: 'Roboto', sans-serif;
     font-family: 'Rubik', sans-serif;
     transition: 0.5s;
+    // button{
+        // cursor: pointer;
+    // }
 
 }
 
 header {
     background-color: white;
     width: 100%;
-    z-index: 999;
+    z-index: 9;
     top: 0;
     position: fixed;
 }
@@ -572,7 +575,7 @@ header {
 }
 
 .section5 {
-    background-image: url(/images/pattern2.png);
+    background-image: url(../pages/images/pattern2.png);
     background-color: #F9F4E2FF;
     // max-height: 200px;
 }
@@ -633,4 +636,96 @@ header {
 
 .toogle open {
     display: block;
+}
+
+
+.modal{
+    z-index: 10     ;
+    h1{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+    }
+    // display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba($color: #FF6633, $alpha: 0.8);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    // #btnClose{
+    //     position: relative;
+    //     right: -1;
+    //     top: -1;
+        // }   
+
+    .modal-cont{
+        // display: flex;
+        // flex-wrap: wrap;
+        width: 40%;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        border: 1px solid #606060;
+        // margin-top: 10px;
+        .modal-content{
+            margin-top: 10px;
+            display: grid;
+            // grid-template-rows: auto;
+            // grid-template-columns: auto;
+            justify-content: center;
+
+            input{
+                border-radius: 10px;
+                margin-bottom: 20px ;
+                padding: 20px;
+                width: 100%;
+                outline: none;
+                border: 1px solid #70C05B;
+            }
+            // .registration{
+                // width: 40%;
+                // justify-content: center;
+            // }
+            .login-btn{
+                button{
+                    padding: 20px;
+                    width: 100%;
+                    // cursor: pointer;
+                }
+                // padding: 20px;
+                
+                // max-width: 80%;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            .registration{
+            // width: 50%;
+            margin-top: 10px;
+            padding: 5px ;
+            background-color: white;
+            border: 1px solid #70C05B;
+            border-radius: 8px;
+                // padding: 20px 0px;
+                // margin-bottom: 20px;
+                // background-color: #70C05B;
+            }
+            
+        //     // display: block;
+        //     // align-content: center;
+    
+        }
+        #btnClose{
+            background-color: rgba(white);
+            border: none;
+        }
+
+    }
+
+
 }

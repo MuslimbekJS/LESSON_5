@@ -70,3 +70,30 @@ function displaySearchResults(results, container) {
         container.appendChild(resultItem);
     }
 }
+
+
+
+
+
+
+
+const btnOpen = document.getElementById("btnOpen");
+const btnClose = document.getElementById("btnClose")
+const modal = document.querySelector(".modal");
+
+btnOpen.addEventListener("click", function(e){
+    // modal.classlist.add("open");
+    if(modal.style.display == "none" || modal.style.display == ""){
+        modal.style.display = "flex";
+    }else{
+        alert("Modal is already open!");
+    }
+});
+btnClose.addEventListener("click", function(e){
+//    modal.classList.remove("open");  
+    if(modal.style.display != "none"){
+        modal.style.display = "none";
+    }else{
+        alert("Modal is not open!")
+    }
+});

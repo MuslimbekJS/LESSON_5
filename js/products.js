@@ -19,53 +19,62 @@
             //     });
             // }
 
-            
-const img = document.querySelector("img");
-const slides = document.getElementsByClassName('carousel-item');
-const nextButton = document.getElementById('carousel-button-next');
-const prevButton = document.getElementById('carousel-button-prev');
-const dots = document.getElementsByClassName('dot');
-let position = 0;
-const numberOfSlides = slides.length;
+const toogleForm = document.getElementById('toggleForm');
+const loginForm = document.getElementById('login-form');
+
+console.log(toogleForm);
+toogleForm.addEventListener('click', function () {
+    // loginForm.classList.toogle('open');
+    if (loginForm.style.display == 'none') {
+        loginForm.style.display = 'block';
+
+    }
+    else {
+        loginForm.style.display = 'none'
+    }
 
 
-function hideAllSlides() {
-  for (const slide of slides) {
-    slide.classList.remove('carousel-item-visible');
-    slide.classList.add('carousel-item-hidden');
-  }
+})
+console.log('work');
+
+
+const cards = document.querySelector(".cards")
+
+function displayProducts(products) {
+    let str = '';
+    products.forEach((product) => {
+
+        str += `
+            <div class = "cards">
+                <div class="card" data-id="${product.id}">
+                   <img src=${product.images[0]} alt="" />
+                   <div class="card-content">
+                   <h2>${product.name}</h2>
+                   <h3>${product.category}</h3>
+                   <p class="price">Price: ${product.price}$</p>
+                    <p class="description">${product.description}</p>
+                    <p  class="rating">rating  :<span>${product.rating}/5 </span></p>
+                   <button class="add_to_cart btn">Add to Cart</button>
+                   <a href="./product.html">
+            <button class="btn-local  btn btn-sm btn-outline-dark" onclick="goDetails(${product.id})">Details</button>
+          </a>
+                   </div>
+                </div>
+            </div> `;
+
+
+
+    })
+    cards.innerHTML = str
 }
 
-const handleMoveToNextSlide = function (e) {
-  hideAllSlides();
-  if (position === numberOfSlides - 1) {
-    position = 0; // go back to first slide
-  } else {
-    position++;
-  }
-  slides[position].classList.add('carousel-item-visible');
-  dots[position].classList.add('selected-dot');
-  dots[position].checked = true;
-};
+displayProducts(products);
 
-const handleMoveToPrevSlide = function (e) {
-  hideAllSlides();
-  if (position === 0) {
-    position = numberOfSlides - 1; // move to the last slide
-  } else {
-    position--;
-  }
-  slides[position].classList.add('carousel-item-visible');
-  dots[position].classList.add('selected-dot');
-  dots[position].checked = true;
-};
 
-nextButton.addEventListener('click', handleMoveToNextSlide);
-prevButton.addEventListener('click', handleMoveToPrevSlide);
 
-for (let i = 0; i < dots.length; i++) {
-  dots[i].addEventListener('click', function () {
-    hideAllSlides();
-    slides[i].classList.add('carousel-item-visible');
-  });
+
+
+         function goDetails(productId) {
+  const product = products.find((pr) => pr.id === productId);
+  localStorage.setItem('productInCart', JSON.stringify(product));
 }

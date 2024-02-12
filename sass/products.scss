@@ -113,13 +113,16 @@ header {
 
     }
 
-    input {
-        outline: none;
-        // padding: 10px 150px 10px 15px;
-        border: 1px solid #70C05BFF;
-        // border-radius: 5px;
-        max-width: 100%;
-    }
+        .input {
+            input {
+                outline: none;
+                padding: 10px 150px 10px 15px;
+                border: 1px solid #70C05BFF;
+                // border-radius: 5px;
+                max-width: 100%;
+            }
+    
+        }
 }
 
 .right-nav {
@@ -147,7 +150,8 @@ header {
     a {
         text-decoration: none;
         color: #414141;
-        ;
+        // padding-left: 10px;
+
 
     }
 }

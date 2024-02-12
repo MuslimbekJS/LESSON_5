@@ -79,8 +79,9 @@ header {
     display: none;
   }
 }
-.navbar input {
+.navbar .input input {
   outline: none;
+  padding: 10px 150px 10px 15px;
   border: 1px solid #70c05b;
   max-width: 100%;
 }
